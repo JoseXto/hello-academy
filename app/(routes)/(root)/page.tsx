@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div>
       <Header />
-      <Button>Hola pijes</Button>
+      <Button>Hola Academia</Button>
     </div>
   );
 }
