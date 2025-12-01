@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import { SidebarProvider } from "@/components/ui/sidebar";
+import { AppSidebar } from "./(routes)/(root)/components";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -22,7 +24,10 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body className={`${spaceGrotesk.variable} antialiased`}>
-          <main className="flex-1">{children}</main>
+          <SidebarProvider>
+            <AppSidebar />
+            <main className="flex-1">{children}</main>
+          </SidebarProvider>
         </body>
       </html>
     </ClerkProvider>
