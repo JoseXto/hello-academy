@@ -1,4 +1,4 @@
-import { BookOpen, House, Settings2, SquareTerminal } from "lucide-react";
+import { BookOpen, ChartArea, GraduationCap, House, Settings2, SquareTerminal } from "lucide-react";
 
 export const routes = [
     {
@@ -21,4 +21,17 @@ export const routes = [
         url: "/settings",
         icon: Settings2
     },
+]
+
+export const routesTeacher = [
+    {
+        title: "Cursos",
+        url: "/teacher",
+        icon: GraduationCap
+    },
+    {
+        title: "Analíticas",
+        url: "/teacher/analytics",
+        icon: ChartArea
+    }
 ]
