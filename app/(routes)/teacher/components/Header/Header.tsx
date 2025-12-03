@@ -1,0 +1,33 @@
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Plus } from "lucide-react";
+import { FormCreateCourse } from "./FormCreateCourse";
+
+export function Header() {
+  return (
+    <div className="my-4 mx-4 border rounded-lg bg-white">
+      <div className="flex justify-between items-center py-4 px-4">
+        <h1 className="text-2xl">Teacher mode</h1>
+        <Dialog>
+          <DialogTrigger asChild>
+            <Button>
+              Crear curso <Plus />
+            </Button>
+          </DialogTrigger>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle>Crea tu curso</DialogTitle>
+              <FormCreateCourse />
+            </DialogHeader>
+          </DialogContent>
+        </Dialog>
+      </div>
+    </div>
+  );
+}
