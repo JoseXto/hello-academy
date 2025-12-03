@@ -1,5 +1,16 @@
-import React from "react";
+import { currentUser } from "@clerk/nextjs/server";
+import { Header } from "./components";
 
-export default function TeacherPage() {
-  return <div>from teacher page</div>;
+export default async function TeacherPage() {
+  const user = await currentUser();
+
+  if (!user) {
+    return <p>Not signed in</p>;
+  }
+
+  return (
+    <div>
+      <Header />
+    </div>
+  );
 }
